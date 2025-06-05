@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: helLight;
+  src: url(/docs/assets/fonts/HelveticaNeueThin.otf) format('opentype');
+}
+
+.helLight {
+  font-family: helLight;
+}
+
+@font-face {
+  font-family: helMedium;
+  src: url(/docs/assets/fonts/HelveticaNeueMedium.otf) format('opentype');
+}
+
+.helMedium {
+  font-family: helMedium;
+}
+
+@font-face {
+  font-family: helSemibold;
+  src: url(/docs/assets/fonts/HelveticaNeueRoman.otf) format('opentype');
+}
+
+.helSemibold {
+  font-family: helSemibold;
+}
+
+.cal {
+  font-family: "Cal Sans", sans-serif;
+}
+
+p {
+  font-family: helLight;
+  font-size: 18px;
+  color: #3A3A3A;
+}
+
+img,
+button,
+iframe,
+a {
+  user-select: none;
+}
+
+.fadeIn {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.myShadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input:user-invalid {
+  border: 1.5px solid rgba(255, 0, 0, 0.416);
+}
+
+.homeBanner {
+  background: linear-gradient(rgba(0, 0, 0, 0.096), rgba(0, 0, 0, 0.13)), url(/docs/assets/images/banner.png) no-repeat center center/cover;
+  min-height: 583.730224609375px;
+  border-radius: 12px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #04488f !important;
+  color: #fff !important;
+}
+
+.accordion-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+
+.accordion-button::after {
+  content: "+";
+  font-size: 1.25rem;
+  transform: rotate(0deg);
+}
+
+.accordion-button {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.accordion-body {
+  color: #fff;
+  background-color: #04488f;
+  font-size: 0.9rem;
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+  .homeMain {
+    max-width: 55%;
+  }
+}
+
+.map {
+  height: 20rem;
+}
+
+@media (min-width: 768px) {
+  .map {
+    height: 30rem;
+  }
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="/docs/assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/docs/style/style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div id="bottomToTopScroll"></div>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-white px-3 py-1" style="z-index: 1040;">
+        <div class="container-xl d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <a data-aos="fade-right" class="navbar-brand d-flex align-items-center" href="./index.html">
+                <!-- Small logo for mobile -->
+                <img src="/docs/assets/images/logo.png" alt="logo" class="d-block d-md-none" style="height: 50px;">
+
+                <!-- Larger logo for desktop -->
+                <img src="/docs/assets/images/logo.png" alt="logo" class="d-none d-md-block" style="height: 80px;">
+            </a>
+
+
+            <!-- Desktop Menu -->
+            <div data-aos="fade-left" class="d-none d-lg-flex align-items-center gap-4">
+                <ul class="navbar-nav me-3 text-light gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onmouseover="this.style.color='#03488e'"
+                            onmouseout="this.style.color=''" style="transition: all 0.5s;">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onmouseover="this.style.color='#03488e'"
+                            onmouseout="this.style.color=''" style="transition: all 0.5s;">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onmouseover="this.style.color='#03488e'"
+                            onmouseout="this.style.color=''" style="transition: all 0.5s;">Gallery</a>
+                    </li>
+                </ul>
+                <!-- Contact Button -->
+            </div>
+            <div data-aos="fade-left">
+                <a href="#"
+                    class="btn d-none d-lg-flex text-white py-1 rounded-pill d-flex align-items-center justify-content-center"
+                    style="background-color: #1E1E1E; width: 120px; height: 35px; text-align: center; transition: background-color 0.3s;"
+                    onmouseover="this.style.backgroundColor='#6d6d6d';"
+                    onmouseout="this.style.backgroundColor='#1E1E1E';">
+                    Call Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <i id="mobileMenuBtn" class="fas fa-bars text-black d-lg-none fs-3 cursor-pointer"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="position-fixed top-0 start-0 bg-white"
+        style="width: 0; height: 100vh; overflow: hidden; z-index: 1050; transition: all 0.5s;">
+        <div class="d-flex justify-content-end p-3">
+            <i class="fas fa-xmark text-black fs-4 mobileMenuCloseBtn cursor-pointer"></i>
+        </div>
+        <div class="p-4">
+            <ul class="list-unstyled text-black">
+                <li class="mb-4">
+                    <a href="#" class="mobileMenuCloseBtn text-nowrap text-black d-block text-decoration-none"
+                        onmouseover="this.style.color='#f5e474'" onmouseout="this.style.color=''"
+                        style="transition: all 0.5s;">Services</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="mobileMenuCloseBtn text-nowrap text-black d-block text-decoration-none"
+                        onmouseover="this.style.color='#f5e474'" onmouseout="this.style.color=''"
+                        style="transition: all 0.5s;">Testimonials</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="mobileMenuCloseBtn text-nowrap text-black d-block text-decoration-none"
+                        onmouseover="this.style.color='#f5e474'" onmouseout="this.style.color=''"
+                        style="transition: all 0.5s;">Gallery</a>
+                </li>
+            </ul>
+            <a href="#" class="btn text-white text-nowrap py-2 rounded d-flex align-items-center justify-content-center"
+                style="background-color: #1E1E1E; height: 55px; text-align: center; transition: background-color 0.3s;"
+                onmouseover="this.style.backgroundColor='#6d6d6d';" onmouseout="this.style.backgroundColor='#1E1E1E';">
+                Call Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <section class="px-3 position-relative">
+        <div class="homeBanner d-flex justify-content-center align-items-start flex-column">
+            <div class="container mx-auto">
+                <div class="homeMain py-3">
+                    <h1 data-aos="fade-up" class=" cal" style="font-size: clamp(40px, 6vw, 96px);color: #1E1E1E;">
+                        Restore & Protect Your Property
+                    </h1>
+                    <h2 data-aos="fade-up" data-aos-delay="200" class="helSemibold pb-1 pt-1 "
+                        style="font-size: clamp(20px, 6vw, 25px); color: #04488F;">Professional Steam Washing for
+                        Driveways, Roofs, Patios & More</h2>
+                    <p data-aos="fade-up" data-aos-delay="400" class=" mx-auto helLight">
+                        Tired of stubborn stains, mold, or grime making your property look dirty? We bring the power of
+                        high-pressure steam cleaning to blast away dirt, oil, algae, and mildew—fast! No damage, no
+                        hassle. Just spotless results that make your home or business shine again.
+
+                    </p>
+                    <div data-aos="fade-up" data-aos-delay="600" class="">
+                        <button
+                            class="btn text-white py-1.5 rounded-pill d-flex align-items-center justify-content-center"
+                            style="background-color: #1E1E1E; width: 250px; height: 35px; text-align: center; transition: background-color 0.3s;"
+                            onmouseover="this.style.backgroundColor='#6d6d6d';"
+                            onmouseout="this.style.backgroundColor='#1E1E1E';">
+                            Call Now for a FREE Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pt-md-4 mt-4" style="background-color: #f4f4f4;">
+        <section class="py-5 mt-md-4 px-3 text-white">
+            <div class="mx-auto" style="max-width: 1030px;">
+                <h2 data-aos="fade-up" class="text-center md:pt-5 cal mx-auto"
+                    style="font-size: clamp(30px, 6vw, 60px); color: #1E1E1E;">
+                    We Make Dirty Surfaces Disappear, Like Magic, But Real!
+                </h2>
+                <p data-aos="fade-up" style="font-size: clamp(18px, 6vw, 22px); color: #04488F;"
+                    class="text-center helSemibold mt-4 ">From Grime-Covered Driveways to Moldy Roofs – We Clean
+                    It All!
+                </p>
+                <p data-aos="fade-up" class="text-center  mt-2 ">Your home or business deserves to look its
+                    best. Our professional steam and pressure washing services remove years of dirt, stains, and
+                    buildup—so you don’t have to stare at it anymore. No surface is too tough for us.</p>
+            </div>
+        </section>
+
+        <section class="container px-3 position-relative mt-md-4 ">
+            <div style="max-width: 1000px;" class="row mx-auto align-items-center justify-content-between">
+                <div class="col-md-6 ps-md-5">
+                    <h2 data-aos="fade-up" class="fw-bold clashBold" style="font-size: clamp(25px, 6vw, 40px);">
+                        Driveway & Patio Cleaning
+                    </h2>
+                    <p data-aos="fade-up">
+                        Oil stains, tire marks, and weather stains don’t stand a chance. We restore concrete, pavers,
+                        and stone to like-new condition—so your home’s entrance looks fresh again.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img data-aos="fade-up" src="/docs/assets/images/image1.png" class="img-fluid w-100 "
+                        alt="Dashboard Image">
+                </div>
+            </div>
+        </section>
+
+        <section class="container px-3 position-relative mt-md-4 mt-5">
+            <div style="max-width: 1000px;"
+                class="row mx-auto align-items-center justify-content-between">
+
+                <!-- Text First on Mobile, Second on Desktop -->
+                <div class="col-md-6 order-1 order-md-2 ps-md-5">
+                    <h2 data-aos="fade-up" class="fw-bold clashBold" style="font-size: clamp(25px, 6vw, 40px);">
+                        Driveway & Patio Cleaning
+                    </h2>
+                    <p data-aos="fade-up">
+                        Oil stains, tire marks, and weather stains don’t stand a chance. We restore concrete, pavers,
+                        and stone to like-new condition—so your home’s entrance looks fresh again.
+                    </p>
+                </div>
+
+                <!-- Image Second on Mobile, First on Desktop -->
+                <div class="col-md-6 order-2 order-md-1">
+                    <img data-aos="fade-up" src="/docs/assets/images/image2.png" class="img-fluid w-100"
+                        alt="Dashboard Image">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container px-3 position-relative mt-md-4 mt-5">
+            <div style="max-width: 1000px;" class="row mx-auto align-items-center justify-content-between">
+                <div class="col-md-6 ps-md-5">
+                    <h2 data-aos="fade-up" class="fw-bold clashBold" style="font-size: clamp(25px, 6vw, 40px);">
+                        House Siding & Deck Cleaning
+                    </h2>
+                    <p data-aos="fade-up">
+                        Dirt, pollen, and green gunk cling to your siding and deck. We wash it all off, bringing back the original color and protecting your home from damage.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img data-aos="fade-up" src="/docs/assets/images/image4.png" class="img-fluid w-100 "
+                        alt="Dashboard Image">
+                </div>
+            </div>
+        </section>
+
+        <section class="container px-3 position-relative mt-md-4 mt-5">
+            <div style="max-width: 1000px;"
+                class="row mx-auto align-items-center justify-content-between">
+
+                <!-- Text First on Mobile, Second on Desktop -->
+                <div class="col-md-6 order-1 order-md-2 ps-md-5">
+                    <h2 data-aos="fade-up" class="fw-bold clashBold" style="font-size: clamp(25px, 6vw, 40px);">
+                        Commercial Pressure Washing
+                    </h2>
+                    <p data-aos="fade-up">
+                        First impressions matter. We clean storefronts, sidewalks, and parking lots so your business looks professional and inviting to customers.
+                    </p>
+                </div>
+
+                <!-- Image Second on Mobile, First on Desktop -->
+                <div class="col-md-6 order-2 order-md-1">
+                    <img data-aos="fade-up" src="/docs/assets/images/image5.png" class="img-fluid w-100"
+                        alt="Dashboard Image">
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <section class="">
+        <div class="container px-3 pb-5 position-relative mt-md-4 pt-md-5">
+            <h2 data-aos="fade-up" class="fw-bold text-center pt-5 clashBold mx-auto"
+                style="font-size: clamp(35px, 6vw, 65px);">
+                Frequently Asked Questions
+            </h2>
+            <p data-aos="fade-up" class="text-center mt-4 ">The Answers for your Questions</p>
+
+            <div data-aos="fade-up" class="accordion mt-5" id="faqAccordion">
+                <!-- Item 1 -->
+                <div class="accordion-item mb-2 border" style="border-radius: 1rem; overflow: hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" style="font-size: 24;" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                            How much does pressure washing cost?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Prices vary based on the size and condition of your property. The best part? We offer free,
+                            no-obligation quotes—call us at [phone number], and we’ll give you a clear estimate.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 (active) -->
+                <div class="accordion-item mb-2 border" style="border-radius: 1rem; overflow: hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2" aria-expanded="true" aria-controls="faq2">
+                            Is this service worth the investment?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse " data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Prices vary based on the size and condition of your property. The best part? We offer free,
+                            no-obligation quotes—call us at [phone number], and we’ll give you a clear estimate.
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="accordion-item mb-2 border" style="border-radius: 1rem; overflow: hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed font-medium" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                            Will pressure washing damage my roof/siding/deck?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Prices vary based on the size and condition of your property. The best part? We offer free,
+                            no-obligation quotes—call us at [phone number], and we’ll give you a clear estimate.
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="accordion-item mb-2 border" style="border-radius: 1rem; overflow: hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed font-medium" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                            What if I’m not satisfied with the results?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Prices vary based on the size and condition of your property. The best part? We offer free,
+                            no-obligation quotes—call us at [phone number], and we’ll give you a clear estimate.
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="accordion-item mb-2 border" style="border-radius: 1rem; overflow: hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed font-medium" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                            How long does the cleaning take?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Prices vary based on the size and condition of your property. The best part? We offer free,
+                            no-obligation quotes—call us at [phone number], and we’ll give you a clear estimate.
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="accordion-item mb-2 border" style="border-radius: 1rem; overflow: hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed font-medium" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                            Do I need to be home during the service?"
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Prices vary based on the size and condition of your property. The best part? We offer free,
+                            no-obligation quotes—call us at [phone number], and we’ll give you a clear estimate.
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item mb-2 border" style="border-radius: 1rem; overflow: hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed font-medium" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                            Are your cleaning solutions safe for kids/pets/plants?
+                        </button>
+                    </h2>
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Prices vary based on the size and condition of your property. The best part? We offer free,
+                            no-obligation quotes—call us at [phone number], and we’ll give you a clear estimate.
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item mb-2 border" style="border-radius: 1rem; overflow: hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed font-medium" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                            Will runoff harm my lawn or garden?
+                        </button>
+                    </h2>
+                    <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Prices vary based on the size and condition of your property. The best part? We offer free,
+                            no-obligation quotes—call us at [phone number], and we’ll give you a clear estimate.
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item mb-2 border" style="border-radius: 1rem; overflow: hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed font-medium" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                            How long until surfaces are dry/walkable?
+                        </button>
+                    </h2>
+                    <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Prices vary based on the size and condition of your property. The best part? We offer free,
+                            no-obligation quotes—call us at [phone number], and we’ll give you a clear estimate.
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 mt-4 px-3 text-white" style="background-color: #04488F;">
+        <div class="mx-auto" style="max-width: 800px;">
+            <h2 data-aos="fade-up" class="text-center md:pt-5 cal mx-auto" style="font-size: clamp(30px, 6vw, 60px);">
+                Don’t Wait—Let’s Get Your Property Looking Brand New!
+            </h2>
+            <p data-aos="fade-up" class="text-center text-white mt-4 ">Speak Directly to Our Team – No Forms, No Wait!
+                Call now for a fast, friendly chat and your free, no-pressure quote. Same-week spots available.</p>
+            <div data-aos="fade-up" class="d-flex md:pb-5 align-items-center justify-content-center">
+                <button class="btn text-white py-1.5 rounded-pill d-flex align-items-center justify-content-center"
+                    style="background-color: #1E1E1E; width: 250px; height: 35px; text-align: center; transition: background-color 0.3s;"
+                    onmouseover="this.style.backgroundColor='#6d6d6d';"
+                    onmouseout="this.style.backgroundColor='#1E1E1E';">
+                    Call Now for a FREE Quote
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158237.30145035422!2d-0.2664053641049552!3d51.52873980483248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e1!3m2!1sen!2s!4v1749124266301!5m2!1sen!2s"
+            class="map w-100" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section class="py-5 px-3 text-white" style="background-color: #1E1E1E;">
+        <div class="mx-auto flex-column d-flex justify-content-center align-items-center" style="max-width: 930px;">
+            <img src="/docs/assets/images/whiteLogo.png" style="height: 5rem;" class="mx-auto " alt="">
+            <p data-aos="fade-up" class="text-center text-white mt-4 ">At Quality Steam Cleaning Services, we believe
+                every home and business deserves to look its best—without harsh chemicals or unnecessary hassle. Our
+                eco-friendly steam and pressure washing services don’t just clean surfaces; they renew, protect, and
+                transform spaces so you can enjoy a spotless, healthier property.</p>
+        </div>
+    </section>
+
+    <p class="text-center pt-3">© Copyright <span id="copyright"></span>. All Rights Reserved</p>
+</body>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="/docs/javascript/global.js"></script>
+
+</html>
