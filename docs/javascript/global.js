@@ -58,3 +58,26 @@ AOS.init({
     once: true,
     duration: 1000
 });
+
+// slider
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, // default (mobile)
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".btn-next",
+        prevEl: ".btn-prev",
+    },
+    breakpoints: {
+        // From 640px and above, show 2 slides
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        }
+    },
+});
